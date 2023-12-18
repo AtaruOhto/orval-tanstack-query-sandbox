@@ -1,11 +1,9 @@
 # React
 
-## Biome
+## Biome & VS Code
 
-* Install VSCode `Biome LSP VS Code Extension`
-* Set default formatter to Biome.
-* 
-
+* Install VS Code `Biome LSP VS Code Extension`
+* Set default formatter to `Biome`.
 
 ## Orval
 
@@ -16,7 +14,7 @@ pnpm dlx orval --config ./orval.config.cjs
 
 ## MSW
 
-```
-
+```sh
+pnpm dlx msw init ./public 
 ```
 

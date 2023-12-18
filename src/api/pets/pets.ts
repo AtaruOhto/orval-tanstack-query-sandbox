@@ -51,7 +51,7 @@ export const getListPetsQueryKey = (params?: ListPetsParams,) => {
     }
 
     
-export const getListPetsQueryOptions = <TData = Awaited<ReturnType<typeof listPets>>, TError = AxiosError<Error>>(params?: ListPetsParams, options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listPets>>, TError, TData>, axios?: AxiosRequestConfig}
+export const getListPetsQueryOptions = <TData = Awaited<ReturnType<typeof listPets>>, TError = AxiosError<Error>>(params?: ListPetsParams, options?: { query?:Partial<UseQueryOptions<Awaited<ReturnType<typeof listPets>>, TError, TData>>, axios?: AxiosRequestConfig}
 ) => {
 
 const {query: queryOptions, axios: axiosOptions} = options ?? {};
@@ -76,7 +76,7 @@ export type ListPetsQueryError = AxiosError<Error>
  * @summary List all pets
  */
 export const useListPets = <TData = Awaited<ReturnType<typeof listPets>>, TError = AxiosError<Error>>(
- params?: ListPetsParams, options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof listPets>>, TError, TData>, axios?: AxiosRequestConfig}
+ params?: ListPetsParams, options?: { query?:Partial<UseQueryOptions<Awaited<ReturnType<typeof listPets>>, TError, TData>>, axios?: AxiosRequestConfig}
 
   ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } => {
 
@@ -157,7 +157,7 @@ export const getShowPetByIdQueryKey = (petId: string,) => {
     }
 
     
-export const getShowPetByIdQueryOptions = <TData = Awaited<ReturnType<typeof showPetById>>, TError = AxiosError<Error>>(petId: string, options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof showPetById>>, TError, TData>, axios?: AxiosRequestConfig}
+export const getShowPetByIdQueryOptions = <TData = Awaited<ReturnType<typeof showPetById>>, TError = AxiosError<Error>>(petId: string, options?: { query?:Partial<UseQueryOptions<Awaited<ReturnType<typeof showPetById>>, TError, TData>>, axios?: AxiosRequestConfig}
 ) => {
 
 const {query: queryOptions, axios: axiosOptions} = options ?? {};
@@ -182,7 +182,7 @@ export type ShowPetByIdQueryError = AxiosError<Error>
  * @summary Info for a specific pet
  */
 export const useShowPetById = <TData = Awaited<ReturnType<typeof showPetById>>, TError = AxiosError<Error>>(
- petId: string, options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof showPetById>>, TError, TData>, axios?: AxiosRequestConfig}
+ petId: string, options?: { query?:Partial<UseQueryOptions<Awaited<ReturnType<typeof showPetById>>, TError, TData>>, axios?: AxiosRequestConfig}
 
   ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } => {
 
