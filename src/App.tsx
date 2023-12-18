@@ -5,6 +5,7 @@ function App() {
 
 	console.log(pets);
 	console.log(refetch);
+	refetch();
 
 	return <h1>Vite + React</h1>;
 }
