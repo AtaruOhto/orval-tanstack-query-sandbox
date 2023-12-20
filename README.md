@@ -18,3 +18,7 @@ pnpm dlx orval --config ./orval.config.cjs
 pnpm dlx msw init ./public 
 ```
 
+* https://mswjs.io/docs/integrations/browser
+* https://mswjs.io/docs/integrations/node
+
+
