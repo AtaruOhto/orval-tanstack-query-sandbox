@@ -1,13 +1,27 @@
-import { useListPets } from "./api/pets/pets";
+import { useCallback } from "react";
+import { useListPets } from "src/api/pets/pets";
+import { Pet } from "./model";
 
 function App() {
 	const { data: pets, refetch } = useListPets();
 
-	console.log(pets);
-	console.log(refetch);
-	refetch();
+	const refetchCallback = useCallback(() => {
+		refetch();
+	}, [refetch]);
 
-	return <h1>Vite + React</h1>;
+	return (
+		<main>
+			<button type="button" onClick={refetchCallback}>
+				Refetch
+			</button>
+			<ul>
+				{pets &&
+					pets.data &&
+					pets.data.length &&
+					pets.data.map((pet: Pet) => <li>{pet.name}</li>)}
+			</ul>
+		</main>
+	);
 }
 
 export default App;
